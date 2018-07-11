@@ -33,32 +33,32 @@ if($pilih=="1"){
 }
 elseif($pilih=="2"){
 		echo "$b Masukkan IP / Domain : $y"; $traceroute=trim(fgets(STDIN));
-			@system("curl https://api.hackertarget.com/mtr/?q=$traceroute");
+			echo "$w" ; @system("curl https://api.hackertarget.com/mtr/?q=$traceroute");
 			echo "$l Done$r ... $w";
 }
 elseif($pilih=="3"){
 		echo "$b Masukkan IP / Domain : $y"; $dns=trim(fgets(STDIN));
-         @system("curl http://api.hackertarget.com/dnslookup/?q=$dns");
+         echo "$w" ; @system("curl http://api.hackertarget.com/dnslookup/?q=$dns");
 		 echo "$l Done$r ... $w";
 }
 elseif($pilih=="4"){
 		echo "$b Masukkan IP / Domain : $y"; $rev=trim(fgets(STDIN));
-      @system("curl https://api.hackertarget.com/reversedns/?q=$rev");
+      echo "$w" ; @system("curl https://api.hackertarget.com/reversedns/?q=$rev");
 	   echo "$l Done$r ... $w";
 }
 elseif($pilih=="5"){
 		echo "$b Masukkan IP / Domain : $y"; $geo=trim(fgets(STDIN));
-		@system("curl http://api.hackertarget.com/geoip/?q=$geo");
+		echo "$w" ; @system("curl http://api.hackertarget.com/geoip/?q=$geo");
 		echo "$l Done$r ... $w";
 }
 elseif($pilih=="6"){
 	echo "$b Masukkan IP / Domain : $y"; $port=trim(fgets(STDIN));
-	@system("curl http://api.hackertarget.com/nmap/?q=$port");
+	echo "$w" ; @system("curl http://api.hackertarget.com/nmap/?q=$port");
 	echo "$l Done$r ... $w";
 }
 elseif($pilih=="7"){
 	echo "$b Masukkan IP / Domain : $y"; $revip=trim(fgets(STDIN));
-	@system("wget http://api.hackertarget.com/reverseiplookup/?q=$revip ; clear ; curl http://api.hackertarget.com/reverseiplookup/?q=");
+	echo "$w" ; @system("wget http://api.hackertarget.com/reverseiplookup/?q=$revip ; clear ; curl http://api.hackertarget.com/reverseiplookup/?q=");
 	echo "$b File saved Gan ";
 	@system("pwd");
 	echo "File : index.html?q=$revip";
